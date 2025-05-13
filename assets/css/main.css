@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@layer base {
+  :root {
+    --color-primary: #F7F7F7;
+    --color-secondary: #DBDECD;
+    --color-accent: #FFFFFF;
+    --color-queonda-red-50: #fff1f2;
+    --color-queonda-red-100: #ffe4e5;
+    --color-queonda-red-200: #fecdd2;
+    --color-queonda-red-300: #fea3ad;
+    --color-queonda-red-400: #fc7081;
+    --color-queonda-red-500: #f53b57;
+    --color-queonda-red-600: #e21c43;
+    --color-queonda-red-700: #bf1137;
+    --color-queonda-red-800: #a01136;
+    --color-queonda-red-900: #891235;
+    --color-queonda-red-950: #4c0518;
+  }
+}
