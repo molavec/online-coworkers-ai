@@ -27,13 +27,13 @@ const randomColor = ref(bubbleColors[Math.floor(Math.random() * bubbleColors.len
 </script>
 
 <template>
-  <div class="space-bubble flex flex-col items-center gap-2 px-6 py-3 rounded-full shadow">
-    <div class="avatar placeholder">
+  <div class="space-bubble flex flex-col items-center gap-2 p-3 rounded-full shadow">
+    <div class="avatar avatar-placeholder">
       <div 
-        class="rounded-full flex items-center justify-center"
-        :style="{ background: randomColor, width: '72px', height: '72px' }"
+        class="bg-neutral text-neutral-content text-3xl hover:text-4xl  w-24 hover:w-32 rounded-full transition-discrete duration-300 ease-in-out"
+        :style="{ background: randomColor }"
       >
-        <span class="text-3xl font-extrabold uppercase text-white drop-shadow">
+        <span class="font-semibold">
           {{ props.label.charAt(0) }}{{ props.label.charAt(1) }}
         </span>
       </div>
