@@ -1,4 +1,6 @@
 <script setup lang="ts">
+
+
 // Motivational phrases array
 const motivationalPhrases = [
   "¡Bienvenido a tu espacio de trabajo!",
@@ -36,7 +38,7 @@ const workspacesTitleExamples = [
         <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">More Spaces</li>
         
         <li class="list-row">
-          <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/1@94.webp"/></div>
+          <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/1@94.webp"></div>
           <div>
             <div>Dio Lupa</div>
             <div class="text-xs uppercase font-semibold opacity-60">Remaining Reason</div>
@@ -50,7 +52,7 @@ const workspacesTitleExamples = [
         </li>
         
         <li class="list-row">
-          <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/4@94.webp"/></div>
+          <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/4@94.webp"></div>
           <div>
             <div>Ellie Beilish</div>
             <div class="text-xs uppercase font-semibold opacity-60">Bears of a fever</div>
@@ -64,7 +66,7 @@ const workspacesTitleExamples = [
         </li>
         
         <li class="list-row">
-          <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/3@94.webp"/></div>
+          <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/3@94.webp"></div>
           <div>
             <div>Sabrino Gardener</div>
             <div class="text-xs uppercase font-semibold opacity-60">Cappuccino</div>

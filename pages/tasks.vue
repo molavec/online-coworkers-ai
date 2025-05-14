@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import {XCircleIcon} from '@heroicons/vue/24/outline'
-// No hay lógica específica aún
 // Array task objects { id, title, description, user, status, createdAt, updatedAt, isCompleted }
 const tasks = ref([
   { id: 1, title: 'Task 1', description: 'Description of Task 1', user: 'User 1', status: 'Pending', createdAt: new Date(), updatedAt: new Date(), isCompleted: false },
@@ -26,7 +25,7 @@ const tasks = ref([
           class="list-row flex items-center justify-between gap-4"
         >
           <div class="flex items-center gap-4 flex-grow">
-            <input v-model="task.isCompleted" type="checkbox" class="checkbox" />
+            <input v-model="task.isCompleted" type="checkbox" class="checkbox" >
             <div>
               <h1 class="text-lg">{{ task.title }}</h1>
               <span class="text-xs">{{ task.description }}</span>

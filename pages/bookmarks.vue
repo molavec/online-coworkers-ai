@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import {XCircleIcon} from '@heroicons/vue/24/outline'
-// No hay lógica específica aún
 // Array bookmarks objects { id, name, url, icon }
 const bookmarks = ref([
   { id: 1, name: 'Figma Project 1', url: 'https://static.figma.com/app/icon/1/favicon.png', icon: 'https://static.figma.com/app/icon/1/favicon.png' },
