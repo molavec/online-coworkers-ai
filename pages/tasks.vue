@@ -1,26 +1,45 @@
 <script setup lang="ts">
+import {XCircleIcon} from '@heroicons/vue/24/outline'
 // No hay lógica específica aún
+// Array task objects { id, title, description, user, status, createdAt, updatedAt, isCompleted }
+const tasks = ref([
+  { id: 1, title: 'Task 1', description: 'Description of Task 1', user: 'User 1', status: 'Pending', createdAt: new Date(), updatedAt: new Date(), isCompleted: false },
+  { id: 2, title: 'Task 2', description: 'Description of Task 2', user: 'User 2', status: 'In Progress', createdAt: new Date(), updatedAt: new Date(), isCompleted: false },
+  { id: 3, title: 'Task 3', description: 'Description of Task 3', user: 'User 3', status: 'Completed', createdAt: new Date(), updatedAt: new Date(), isCompleted: true },
+])
+
+
 </script>
 
 <template>
-  <div class="tasks-view">
-    <h1>TasksView</h1>
-    <ul class="task-list">
-      <li>
-        <input id="task1" type="checkbox">
-        <label for="task1">Tarea 1: Diseñar wireframe</label>
-      </li>
-      <li>
-        <input id="task2" type="checkbox">
-        <label for="task2">Tarea 2: Revisar dashboard</label>
-      </li>
-      <li>
-        <input id="task3" type="checkbox">
-        <label for="task3">Tarea 3: Añadir bookmark</label>
-      </li>
-    </ul>
-  </div>
+  <NuxtLayout>
+
+    <div class="w-full p-4">
+      <!-- title -->
+      <h1 class="text-2xl font-light mb-8">Tasks</h1>
+
+      <!-- content -->
+      <ul class="list rounded-box shadow bg-gray-800">
+        <li 
+          v-for="task in tasks" 
+          :key="task.id" 
+          class="list-row flex items-center justify-between gap-4"
+        >
+          <div class="flex items-center gap-4 flex-grow">
+            <input v-model="task.isCompleted" type="checkbox" class="checkbox" />
+            <div>
+              <h1 class="text-lg">{{ task.title }}</h1>
+              <span class="text-xs">{{ task.description }}</span>
+            </div>
+          </div>
+          <div class="px-2" @click.stop="tasks.splice(tasks.indexOf(task), 1)">
+            <XCircleIcon class="size-6 cursor-pointer"/>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </NuxtLayout>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

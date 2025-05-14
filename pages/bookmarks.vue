@@ -12,11 +12,23 @@ const bookmarks = ref([
 
 <template>
   <NuxtLayout>
-    <div class="bookmarks-view w-full p-4">
+
+    <div class="w-full p-4">
+      <!-- title -->
       <h1 class="text-2xl font-light mb-8">Bookmarks</h1>
-      <ul class="bookmark-list">
-        <a v-for="bookmark in bookmarks" :key="bookmark.id" :href="bookmark.url" target="_blank" rel="noopener noreferrer">
-          <li class="bookmark-item flex items-center gap-4 p-4 bg-gray-800 rounded-lg shadow-md mb-4">
+
+      <!-- content -->
+      <ul class="list rounded-box shadow bg-gray-800">
+        <li 
+          v-for="bookmark in bookmarks" 
+          :key="bookmark.id" 
+          class="list-row flex items-center justify-between gap-4"
+        >
+          <a 
+            :href="bookmark.url"
+            target="_blank"
+            class="no-underline"
+            rel="noopener noreferrer">
             <div class="flex items-center gap-2 flex-grow">
               <img :src="bookmark.icon" alt="Bookmark Icon" class="bookmark-icon">
               <div>
@@ -24,13 +36,14 @@ const bookmarks = ref([
                 <span class="text-xs">{{ bookmark.url }}</span>
               </div>
             </div>
-            <div class="px-2" @click.stop="bookmarks.splice(bookmarks.indexOf(bookmark), 1)">
-              <XCircleIcon class="size-6 cursor-pointer"/>
-            </div>
-          </li>
-        </a>
+          </a>
+          <div class="px-2" @click.stop="bookmarks.splice(bookmarks.indexOf(bookmark), 1)">
+            <XCircleIcon class="size-6 cursor-pointer"/>
+          </div>
+        </li>
       </ul>
     </div>
+
   </NuxtLayout>
 </template>
 
