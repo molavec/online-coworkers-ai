@@ -6,6 +6,9 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   modules: ['@nuxt/eslint'],
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    server: {
+      allowedHosts: ['e6ff-186-78-232-87.ngrok-free.app'],
+    },
   }
 })

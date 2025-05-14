@@ -6,7 +6,9 @@ import WorkspacesLogo from '~/components/WorkspacesLogo.vue'
     <!-- header -->
     <div class="flex items-center justify-between bg-queonda-500 p-4">
       <div class="left">
-        <WorkspacesLogo />
+        <NuxtLink to="/">
+          <WorkspacesLogo />
+        </NuxtLink>
       </div>
       <div class="right">
         <div class="avatar avatar-placeholder">

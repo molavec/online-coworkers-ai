@@ -13,13 +13,10 @@ const bubbleColors = [
   '#F53B57', // rojo principal
   '#FC7081', // rosa
   '#F7374F', // acento
-  '#FEA3AD', // rosa claro
   '#3A3838', // gris oscuro (texto)
-  '#FFF1F2', // fondo claro
   '#B2BC57', // verde lima
   '#CFBA00', // amarillo
   '#8FB264', // verde
-  '#B2C6D5', // azul grisáceo
   '#CA72BE', // violeta
 ]
 
