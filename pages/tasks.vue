@@ -23,21 +23,4 @@
 </template>
 
 <style scoped>
-.tasks-view {
-  padding: 2rem;
-}
-.task-list {
-  margin-top: 2rem;
-  list-style: none;
-  padding: 0;
-}
-.task-list li {
-  background: #f7f7f7;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border-radius: 0.75rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
 </style>
