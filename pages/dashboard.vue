@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import {XCircleIcon} from '@heroicons/vue/24/outline'
 // No hay lógica específica aún
 // Array bookmarks objects { id, name, url, icon }
 const bookmarks = ref([
@@ -14,6 +13,7 @@ const tasks = ref([
   { id: 2, title: 'Task 2', description: 'Description of Task 2', user: 'User 2', status: 'In Progress', createdAt: new Date(), updatedAt: new Date(), isCompleted: false },
   { id: 3, title: 'Task 3', description: 'Description of Task 3', user: 'User 3', status: 'Completed', createdAt: new Date(), updatedAt: new Date(), isCompleted: true },
 ])
+
 </script>
 
 <template>
@@ -24,30 +24,17 @@ const tasks = ref([
         <h1 class="text-2xl font-light mb-4">Quick Links</h1>
   
         <!-- content -->
-        <ul class="list rounded-box shadow bg-gray-800">
-          <li 
+        <div class="list rounded-box shadow bg-gray-800">
+          <BookmarkItem 
             v-for="bookmark in bookmarks" 
+            :id="bookmark.id" 
             :key="bookmark.id" 
-            class="list-row flex items-center justify-between gap-4"
-          >
-            <a 
-              :href="bookmark.url"
-              target="_blank"
-              class="no-underline"
-              rel="noopener noreferrer">
-              <div class="flex items-center gap-2 flex-grow">
-                <img :src="bookmark.icon" alt="Bookmark Icon" class="bookmark-icon">
-                <div>
-                  <h1 class="text-lg">{{ bookmark.name }}</h1>
-                  <span class="text-xs">{{ bookmark.url }}</span>
-                </div>
-              </div>
-            </a>
-            <div class="px-2" @click.stop="bookmarks.splice(bookmarks.indexOf(bookmark), 1)">
-              <XCircleIcon class="size-6 cursor-pointer"/>
-            </div>
-          </li>
-        </ul>
+            :name="bookmark.name" 
+            :url="bookmark.url" 
+            :icon="bookmark.icon"
+            @delete="bookmarks.splice(bookmarks.indexOf(bookmark), 1)"
+          />
+        </div>
       </div>
   
       <div class="w-full p-2">
@@ -55,8 +42,17 @@ const tasks = ref([
         <h1 class="text-2xl font-light mb-4">Tasks</h1>
   
         <!-- content -->
-        <ul class="list rounded-box shadow bg-gray-800">
-          <li 
+        <div class="list rounded-box shadow bg-gray-800">
+          <TaskItem
+            v-for="task in tasks" 
+            :id="task.id" 
+            :key="task.id" 
+            v-model="task.isCompleted"
+            :title="task.title" 
+            :description="task.description"
+            @delete="tasks.splice(tasks.indexOf(task), 1)"
+          />
+          <!-- <div 
             v-for="task in tasks" 
             :key="task.id" 
             class="list-row flex items-center justify-between gap-4"
@@ -71,8 +67,8 @@ const tasks = ref([
             <div class="px-2" @click.stop="tasks.splice(tasks.indexOf(task), 1)">
               <XCircleIcon class="size-6 cursor-pointer"/>
             </div>
-          </li>
-        </ul>
+          </div> -->
+        </div>
       </div>
     </div>
 
