@@ -19,9 +19,9 @@ const tasks = ref([
 <template>
   <NuxtLayout>
     <div class="flex gap-4 w-full">
-      <div class="w-full p-4">
+      <div class="w-full p-2">
         <!-- title -->
-        <h1 class="text-2xl font-light mb-8">Quick Links</h1>
+        <h1 class="text-2xl font-light mb-4">Quick Links</h1>
   
         <!-- content -->
         <ul class="list rounded-box shadow bg-gray-800">
@@ -50,9 +50,9 @@ const tasks = ref([
         </ul>
       </div>
   
-      <div class="w-full p-4">
+      <div class="w-full p-2">
         <!-- title -->
-        <h1 class="text-2xl font-light mb-8">Tasks</h1>
+        <h1 class="text-2xl font-light mb-4">Tasks</h1>
   
         <!-- content -->
         <ul class="list rounded-box shadow bg-gray-800">

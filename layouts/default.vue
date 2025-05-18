@@ -11,7 +11,7 @@ const toggleSidebar = () => {
 <template>
   <div>
     <!-- header -->
-    <div class="flex items-center justify-between bg-queonda-500 p-4">
+    <div class="flex items-center justify-between bg-queonda-500 p-2">
       <div class="left">
         <NuxtLink to="/">
           <WorkspacesLogo />
@@ -27,7 +27,7 @@ const toggleSidebar = () => {
     </div>
 
     <!-- content -->
-    <div class="flex gap-2 min-h-96 p-4">
+    <div class="flex gap-2 min-h-96 p-2">
       <!-- sidebar -->
       <div 
         class="flex flex-col gap-2 p-2 min-h-full transition-discrete duration-300 ease-in-out"

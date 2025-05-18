@@ -12,9 +12,9 @@ const bookmarks = ref([
 <template>
   <NuxtLayout>
 
-    <div class="w-full p-4">
+    <div class="w-full p-2">
       <!-- title -->
-      <h1 class="text-2xl font-light mb-8">Bookmarks</h1>
+      <h1 class="text-2xl font-light mb-4">Bookmarks</h1>
 
       <!-- content -->
       <ul class="list rounded-box shadow bg-gray-800">
