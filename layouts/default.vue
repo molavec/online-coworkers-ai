@@ -6,6 +6,16 @@ const isSidebarCollapsed = ref(false)
 const toggleSidebar = () => {
   isSidebarCollapsed.value = !isSidebarCollapsed.value
 }
+
+// Workspaces title examples array
+const workspacesTitleExamples = [
+  "Marketing Meta",
+  "Woocommerce",
+  "Tesis",
+  "Ocio",
+  "New",
+]
+
 </script>
 
 <template>
@@ -17,9 +27,13 @@ const toggleSidebar = () => {
           <WorkspacesLogo />
         </NuxtLink>
       </div>
-      <div class="right">
+      <div class="right flex items-center gap-2">
+        <select class="select">
+          <option disabled selected>Pick a color</option>
+          <option v-for="ws in workspacesTitleExamples" :key="ws">{{ws}}</option>
+        </select>
         <div class="avatar avatar-placeholder">
-          <div class="bg-neutral text-neutral-content w-12 rounded-full">
+          <div class="bg-neutral text-neutral-content w-10 rounded-full">
             <span>SY</span>
           </div>
         </div>

@@ -26,7 +26,7 @@ const workspacesTitleExamples = [
 <template>
   <NuxtLayout name="main">
     <h1 class="text-3xl font-bold mb-4">{{randomPhrase}}</h1>
-    <div class="flex flex-wrap gap-2 justify-center items-center min-h-[28vh]">
+    <div class="flex flex-wrap gap-2 justify-center items-center min-h-48">
       <NuxtLink 
         v-for="ws in workspacesTitleExamples" 
         :key="ws" 
