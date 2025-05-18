@@ -18,60 +18,68 @@ const tasks = ref([
 
 <template>
   <NuxtLayout>
-    <div class="flex gap-4 w-full">
-      <div class="w-full p-2">
-        <!-- title -->
-        <h1 class="text-2xl font-light mb-4">Quick Links</h1>
-  
-        <!-- content -->
-        <div class="list rounded-box shadow bg-gray-800">
-          <BookmarkItem 
-            v-for="bookmark in bookmarks" 
-            :id="bookmark.id" 
-            :key="bookmark.id" 
-            :name="bookmark.name" 
-            :url="bookmark.url" 
-            :icon="bookmark.icon"
-            @delete="bookmarks.splice(bookmarks.indexOf(bookmark), 1)"
-          />
-        </div>
+    <div class="w-full">
+      
+      <div class="flex items-center justify-end px-2">
+        <UserBubble username="User 1" class="mr-[-10px] hover:z-100" />
+        <UserBubble username="User 2" class="mr-[-10px] hover:z-100" />
+        <UserBubble username="+" />
       </div>
   
-      <div class="w-full p-2">
-        <!-- title -->
-        <h1 class="text-2xl font-light mb-4">Tasks</h1>
-  
-        <!-- content -->
-        <div class="list rounded-box shadow bg-gray-800">
-          <TaskItem
-            v-for="task in tasks" 
-            :id="task.id" 
-            :key="task.id" 
-            v-model="task.isCompleted"
-            :title="task.title" 
-            :description="task.description"
-            @delete="tasks.splice(tasks.indexOf(task), 1)"
-          />
-          <!-- <div 
-            v-for="task in tasks" 
-            :key="task.id" 
-            class="list-row flex items-center justify-between gap-4"
-          >
-            <div class="flex items-center gap-4 flex-grow">
-              <input v-model="task.isCompleted" type="checkbox" class="checkbox" >
-              <div>
-                <h1 class="text-lg">{{ task.title }}</h1>
-                <span class="text-xs">{{ task.description }}</span>
+      <div class="flex gap-4 w-full">
+        <div class="w-full p-2">
+          <!-- title -->
+          <h1 class="text-2xl font-light mb-4">Quick Links</h1>
+    
+          <!-- content -->
+          <div class="list rounded-box shadow bg-gray-800">
+            <BookmarkItem 
+              v-for="bookmark in bookmarks" 
+              :id="bookmark.id" 
+              :key="bookmark.id" 
+              :name="bookmark.name" 
+              :url="bookmark.url" 
+              :icon="bookmark.icon"
+              @delete="bookmarks.splice(bookmarks.indexOf(bookmark), 1)"
+            />
+          </div>
+        </div>
+        <div class="w-full p-2">
+          <!-- title -->
+          <h1 class="text-2xl font-light mb-4">Tasks</h1>
+    
+          <!-- content -->
+          <div class="list rounded-box shadow bg-gray-800">
+            <TaskItem
+              v-for="task in tasks" 
+              :id="task.id" 
+              :key="task.id" 
+              v-model="task.isCompleted"
+              :title="task.title" 
+              :description="task.description"
+              @delete="tasks.splice(tasks.indexOf(task), 1)"
+            />
+            <!-- <div 
+              v-for="task in tasks" 
+              :key="task.id" 
+              class="list-row flex items-center justify-between gap-4"
+            >
+              <div class="flex items-center gap-4 flex-grow">
+                <input v-model="task.isCompleted" type="checkbox" class="checkbox" >
+                <div>
+                  <h1 class="text-lg">{{ task.title }}</h1>
+                  <span class="text-xs">{{ task.description }}</span>
+                </div>
               </div>
-            </div>
-            <div class="px-2" @click.stop="tasks.splice(tasks.indexOf(task), 1)">
-              <XCircleIcon class="size-6 cursor-pointer"/>
-            </div>
-          </div> -->
+              <div class="px-2" @click.stop="tasks.splice(tasks.indexOf(task), 1)">
+                <XCircleIcon class="size-6 cursor-pointer"/>
+              </div>
+            </div> -->
+          </div>
         </div>
       </div>
-    </div>
 
+    </div>
   </NuxtLayout>
 </template>
 
