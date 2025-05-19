@@ -1,21 +1,16 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-@layer base {
-  :root {
-    --color-primary: #F7F7F7;
-    --color-secondary: #DBDECD;
-    --color-accent: #FFFFFF;
-    --color-queonda-red-50: #fff1f2;
-    --color-queonda-red-100: #ffe4e5;
-    --color-queonda-red-200: #fecdd2;
-    --color-queonda-red-300: #fea3ad;
-    --color-queonda-red-400: #fc7081;
-    --color-queonda-red-500: #f53b57;
-    --color-queonda-red-600: #e21c43;
-    --color-queonda-red-700: #bf1137;
-    --color-queonda-red-800: #a01136;
-    --color-queonda-red-900: #891235;
-    --color-queonda-red-950: #4c0518;
-  }
+@theme {
+  --color-queonda-red-50: oklch(0.9694 0.0152 12.42);
+  --color-queonda-red-100: oklch(0.9411 0.0297 15.14);
+  --color-queonda-red-200: oklch(0.8922 0.0558 11.37);
+  --color-queonda-red-300: oklch(0.8086 0.1085 12.61);
+  --color-queonda-red-400: oklch(0.7183 0.1711 15.02);
+  --color-queonda-red-500: oklch(0.6422 0.2197 18.21);
+  --color-queonda-red-600: oklch(0.5864 0.2234 19.13);
+  --color-queonda-red-700: oklch(0.5149 0.1991 18.76);
+  --color-queonda-red-800: oklch(0.4554 0.1725 15.14);
+  --color-queonda-red-900: oklch(0.4111 0.1515 11.49);
+  --color-queonda-red-950: oklch(0.2706 0.1008 13.03);
 }
