@@ -24,7 +24,7 @@ const randomColor = ref(bubbleColors[Math.floor(Math.random() * bubbleColors.len
 </script>
 
 <template>
-  <div class="space-bubble flex flex-col items-center gap-2 p-3 rounded-full shadow">
+  <div class="space-bubble flex flex-col items-center gap-2 p-3">
     <div class="avatar avatar-placeholder">
       <div 
         class="bg-neutral text-neutral-content text-3xl hover:text-4xl w-24 hover:w-32 rounded-full transition-discrete duration-300 ease-in-out"

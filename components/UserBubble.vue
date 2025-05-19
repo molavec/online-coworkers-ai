@@ -21,7 +21,7 @@ const randomColor = ref(bubbleColors[Math.floor(Math.random() * bubbleColors.len
 </script>
 
 <template>
-  <div class="tooltip tooltip-left flex flex-col items-center rounded-full shadow cursor-pointer">
+  <div class="tooltip tooltip-left flex flex-col items-center rounded-full cursor-pointer">
     <div class="tooltip-content">
       <div class="rotate-5"> {{ username }} </div>
     </div>

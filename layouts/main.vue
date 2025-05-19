@@ -4,7 +4,7 @@ import WorkspacesLogo from '~/components/WorkspacesLogo.vue'
 <template>
   <div>
     <!-- header -->
-    <div class="flex items-center justify-between bg-queonda-500 p-2">
+    <div class="flex items-center justify-between p-2">
       <div class="left">
         <NuxtLink to="/">
           <WorkspacesLogo />
