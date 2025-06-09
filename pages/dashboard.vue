@@ -17,7 +17,7 @@ const tasks = ref([
 </script>
 
 <template>
-  <NuxtLayout>
+  <div>
     <div class="w-full">
       
       <div class="flex items-center justify-end px-2">
@@ -80,7 +80,7 @@ const tasks = ref([
       </div>
 
     </div>
-  </NuxtLayout>
+  </div>
 </template>
 
 <style scoped></style>

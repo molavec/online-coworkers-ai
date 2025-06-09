@@ -1,5 +1,9 @@
 <script setup lang="ts">
 
+definePageMeta({
+  layout: 'main'
+})
+
 
 // Motivational phrases array
 const motivationalPhrases = [
@@ -24,7 +28,7 @@ const workspacesTitleExamples = [
 </script>
 
 <template>
-  <NuxtLayout name="main">
+  <div class="flex flex-col items-center pt-24 p-2">
     <h1 class="text-3xl text-queonda-red-500 font-bold mb-4">{{randomPhrase}}</h1>
     <div class="flex flex-wrap gap-2 justify-center items-center min-h-48">
       <NuxtLink 
@@ -64,7 +68,7 @@ const workspacesTitleExamples = [
         
       </ul>
     </div>
-  </NuxtLayout>
+  </div>
 </template>
 
 <style scoped></style>

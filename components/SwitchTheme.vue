@@ -13,7 +13,8 @@ const theme = ref<string | null>(null);
 const isDarkMode = ref<boolean>(false);
 
 onBeforeMount(() => {
-  // check if isDarkMode is defined in localStorage. if not, set vue ref to prefers color scheme dark option matches and set localStorage to dark
+  // check if isDarkMode is defined in localStorage. 
+  // if not, set vue ref to prefers color scheme dark option matches and set localStorage to dark
   if (localStorage.getItem('theme') === null) {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
     console.log('prefersDark', prefersDark)
@@ -22,9 +23,17 @@ onBeforeMount(() => {
 
   // get isDarkMode from localStorage and set vue isDarkMode ref as boolean
   theme.value = localStorage.getItem('theme')
+  console.log('theme', theme.value)
   isDarkMode.value = theme.value === 'dark' ? true : false
 })
   
+const setPrefersColorScheme = () => {
+  // toggle isDarkMode
+  isDarkMode.value = !isDarkMode.value
+  // set localStorage theme to dark or light
+  localStorage.setItem('theme', isDarkMode.value ? 'dark' : 'light')
+
+}
 
 </script>
 
@@ -32,7 +41,8 @@ onBeforeMount(() => {
 
   <label class="swap swap-rotate">
     <!-- this hidden checkbox controls the state -->
-    <input type="checkbox" class="theme-controller" :value="isDarkMode ? 'light': 'dark'" >
+    <!-- Note: swap-on depends on isDarkMode -->
+    <input type="checkbox" class="theme-controller" :value="isDarkMode ? 'light': 'dark'" @click="setPrefersColorScheme">
 
 
     <!-- moon icon -->

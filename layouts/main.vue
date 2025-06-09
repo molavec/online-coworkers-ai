@@ -21,7 +21,7 @@ import WorkspacesLogo from '~/components/WorkspacesLogo.vue'
     </div>
 
     <!-- content -->
-    <div class="flex flex-col items-center pt-24 p-2">
+    <div>
       <slot />
     </div>
     

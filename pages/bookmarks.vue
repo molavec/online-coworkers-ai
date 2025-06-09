@@ -10,7 +10,7 @@ const bookmarks = ref([
 </script>
 
 <template>
-  <NuxtLayout>
+  <div>
 
     <div class="w-full p-2">
       <!-- title -->
@@ -43,7 +43,7 @@ const bookmarks = ref([
       </ul>
     </div>
 
-  </NuxtLayout>
+  </div>
 </template>
 
 <style scoped></style>
