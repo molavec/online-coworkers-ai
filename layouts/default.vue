@@ -32,6 +32,10 @@ const workspacesTitleExamples = [
           <option disabled selected>Pick a color</option>
           <option v-for="ws in workspacesTitleExamples" :key="ws">{{ws}}</option>
         </select>
+        <!-- dark/ligth theme -->
+        <ClientOnly >
+          <SwitchTheme />
+        </ClientOnly>
         <div class="avatar avatar-placeholder">
           <div class="bg-neutral text-neutral-content w-10 rounded-full">
             <span>SY</span>

@@ -11,7 +11,10 @@ import WorkspacesLogo from '~/components/WorkspacesLogo.vue'
         </NuxtLink>
       </div>
       <div class="right flex items-center gap-2">
-        <SwitchTheme />
+        <!-- dark/ligth theme -->
+        <ClientOnly >
+          <SwitchTheme />
+        </ClientOnly>
         <div class="avatar avatar-placeholder">
           <div class="bg-neutral text-neutral-content w-12 rounded-full">
             <span>SY</span>
