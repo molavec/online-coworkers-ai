@@ -1,8 +1,15 @@
 @import "tailwindcss";
+
 @plugin "daisyui" {
   themes: light --default, dark --prefersdark;
 }
 
+/* Nota: No parece funcionar. Aunque se recomienda utilizar prefer-color-schema */
+/* https://github.com/saadeghi/daisyui/discussions/1949 */
+/* https://daisyui.com/docs/themes/?lang=es#how-to-apply-tailwinds-dark-selector-for-specific-themes */
+/* https://tailwindcss.com/docs/dark-mode */
+/* @custom-variant dark (&:where(.dark *)); */
+/* @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *)); */
 
 @theme {
   --queonda-red-hue: 18.21;
@@ -19,5 +26,5 @@
   --color-queonda-red-950: oklch(0.11 0.20 18.21);
 }
 
-@variant custom-dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 
