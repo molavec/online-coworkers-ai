@@ -18,7 +18,7 @@ const tasks = ref([
       <h1 class="text-2xl font-light mb-4">Tasks</h1>
 
       <!-- content -->
-      <ul class="list rounded-box shadow bg-gray-800">
+      <ul class="list rounded-box shadow">
         <li 
           v-for="task in tasks" 
           :key="task.id" 

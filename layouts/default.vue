@@ -51,7 +51,7 @@ const workspacesTitleExamples = [
         class="flex flex-col gap-2 p-2 min-h-full transition-discrete duration-300 ease-in-out"
         :class="isSidebarCollapsed ? 'w-12' : 'w-42'"
       >
-        <NuxtLink to="/dashboard" class="rounded-2xl p-2 bg-gray-800 shadow-xs shadow-red-600">
+        <NuxtLink to="/dashboard" class="rounded-2xl p-2 dark:bg-gray-800 shadow-xs shadow-red-600">
           {{ isSidebarCollapsed ? 'D' : 'Dashboard' }}
         </NuxtLink>
         <NuxtLink to="/bookmarks" class="rounded-2xl p-2">

@@ -1,13 +1,4 @@
 <script lang="ts" setup>
-//get current browser prefers color scheme
-// const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches
-// console.log('prefersLight', prefersLight)
-// const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-// console.log('prefersDark', prefersDark)
-
-// check if isDarkMode is defined in localStorage
-// const isDarkMode = localStorage.getItem('isDarkMode')
-// console.log('isDarkMode', isDarkMode)
 
 // check if browser prefers color scheme light or dark
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -17,7 +8,6 @@ const theme = ref<string | null>(null);
 const isDarkMode = ref<boolean>(false);
 
 onBeforeMount(() => {
-
 
   // check if isDarkMode is defined in localStorage. 
   // if not, set vue ref to prefers color scheme dark option matches and set localStorage to dark
@@ -76,7 +66,6 @@ const setPrefersColorScheme = () => {
       </g>
     </svg>
 
-    
     <svg aria-label="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
       <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
         <circle cx="12" cy="12" r="4"/>
@@ -90,7 +79,6 @@ const setPrefersColorScheme = () => {
         <path d="m19.07 4.93-1.41 1.41"/>
       </g>
     </svg>
-
     
   </label>
   

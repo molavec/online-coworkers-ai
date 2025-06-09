@@ -3,6 +3,7 @@
   themes: light --default, dark --prefersdark;
 }
 
+
 @theme {
   --queonda-red-hue: 18.21;
   --color-queonda-red-50: oklch(0.99 0.05 18.21);
@@ -17,4 +18,6 @@
   --color-queonda-red-900: oklch(0.21 0.15 18.21);
   --color-queonda-red-950: oklch(0.11 0.20 18.21);
 }
+
+@variant custom-dark (&:where([data-theme=dark], [data-theme=dark] *));
 

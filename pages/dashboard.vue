@@ -32,7 +32,7 @@ const tasks = ref([
           <h1 class="text-2xl font-light mb-4">Quick Links</h1>
     
           <!-- content -->
-          <div class="list rounded-box shadow bg-gray-800">
+          <div class="list rounded-box shadow">
             <BookmarkItem 
               v-for="bookmark in bookmarks" 
               :id="bookmark.id" 
@@ -49,7 +49,7 @@ const tasks = ref([
           <h1 class="text-2xl font-light mb-4">Tasks</h1>
     
           <!-- content -->
-          <div class="list rounded-box shadow bg-gray-800">
+          <div class="list rounded-box shadow">
             <TaskItem
               v-for="task in tasks" 
               :id="task.id" 

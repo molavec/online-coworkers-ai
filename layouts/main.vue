@@ -16,7 +16,7 @@ import WorkspacesLogo from '~/components/WorkspacesLogo.vue'
           <SwitchTheme />
         </ClientOnly>
         <div class="avatar avatar-placeholder">
-          <div class="bg-neutral text-neutral-content w-12 rounded-full">
+          <div class="bg-neutral text-neutral-content w-10 rounded-full">
             <span>SY</span>
           </div>
         </div>
