@@ -13,7 +13,12 @@ const motivationalPhrases = [
   "¡Cada tarea es un paso hacia el éxito!",
   "¡Tu espacio, tus reglas!",
 ]
-const randomPhrase = motivationalPhrases[Math.floor(Math.random() * motivationalPhrases.length)]
+const randomPhrase = ref("¡Bienvenido a tu espacio de trabajo!") // Default phrase
+
+onMounted(() => {
+  randomPhrase.value = motivationalPhrases[Math.floor(Math.random() * motivationalPhrases.length)]
+})
+
 // const { t } = useI18n()
 
 // Workspaces title examples array
