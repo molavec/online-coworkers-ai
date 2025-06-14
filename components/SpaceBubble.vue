@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 
 const props = defineProps({
   label: {
@@ -20,7 +20,11 @@ const bubbleColors = [
   '#CA72BE', // violeta
 ]
 
-const randomColor = ref(bubbleColors[Math.floor(Math.random() * bubbleColors.length)])
+const randomColor = ref('#F53B57') // Default color
+
+onMounted(() => {
+  randomColor.value = bubbleColors[Math.floor(Math.random() * bubbleColors.length)]
+})
 </script>
 
 <template>
